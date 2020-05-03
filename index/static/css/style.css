@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css?family=Bungee');
+@import url('https://fonts.googleapis.com/css?family=Consolas');
+@import url('https://fonts.googleapis.com/css?family=Srisakdi');
+
+* {
+	font-family: 'Consolas';
+	box-sizing: border-box;
+}
+
+body {
+	background-color: rebeccapurple;
+	left: 0;
+	top: 0;
+	margin: 0;
+	height: 100%;
+}
+
+body:after {
+	display: none;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: black;
+    opacity: 0.7;
+    z-index: 1;
+}
+
+h1 {
+	position: relative;
+	font-family: 'Bungee';
+	margin: auto;
+	width: 300px;
+	height: 50px;
+	padding: 0;
+	top: 0;
+}
+
+#lopt_first {
+	position: relative;
+	font-family: 'Bungee';
+	font-size: 20px;
+	margin: 0;
+	width: 50%;
+	padding-top: 7px;
+	text-align: center;
+	color: white;
+	float: left;
+	cursor: pointer;
+}
+
+#lopt_second {
+	position: relative;
+	font-family: 'Bungee';
+	font-size: 20px;
+	margin: 0;
+	width: 50%;
+	padding-top: 7px;
+	text-align: center;
+	color: white;
+	float: right;
+	cursor: pointer;
+	background-color: rebeccapurple;
+}
+
+header {
+	position: relative;
+	padding: 0px 20px 20px 20px;
+	width: 100%;
+	opacity: 0.8;
+	background-color: rgb(84, 39, 129);
+}
+
+footer {
+	position: relative;
+	width: 100%;
+}
+
+footer div {
+	position: relative;
+	margin: auto;
+	width: 47%;
+}
+
+label {
+	color: white;
+}
+
+a {
+	color: inherit;
+}
+
+#user_opts {
+	text-decoration: none;
+	list-style: none;
+}
+
+#user_opts li {
+	color: aquamarine;
+	padding: 10px;
+	border-bottom: 1px solid aquamarine;
+}
+
+#user_info .heading {
+	color: aquamarine;
+}
+
+#user_opts li:hover {
+	background-color: aquamarine;
+	color: black;
+	cursor: pointer;
+}
+
+#login_opts {
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+
+#broadcast_window {
+	display: none;
+	position: fixed;
+	height: 460px;
+	width: 800px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -40%);
+	z-index: 2;
+}
+
+#login_box {
+	position: relative;
+	margin: auto;
+	margin-top: 90px;
+	width: 800px;
+	height: 590px;
+	
+	background-color: rgb(84, 39, 129);
+}
+
+#id_login {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 50px;
+	font-size: 30px;
+}
+
+#id_password {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 50px;
+	font-size: 30px;
+}
+
+#login_box button {
+	position: relative;
+	display: block;
+	margin: auto;
+	width: 100px;
+	height: 50px;
+}
+
+#login_form {
+	position: relative;
+	width: 70%;
+	height: 70%;
+	margin: auto;
+	padding-top: 0;
+	top: 130px;
+}
+
+#reg_form {
+	display: none;
+	position: relative;
+	width: 70%;
+	height: 70%;
+	margin: auto;
+	padding-top: 0;
+	top: 50px;
+}
+
+#reg_form input {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 40px;
+	font-size: 25px;
+}
+
+#broadcast_window img {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+#mainBox {
+	position: relative;
+	height: 450px;
+	width: 800px;
+	margin: auto;
+	border-style: solid;
+}
+
+#copy {
+	position: relative;
+	width: 20%;
+	margin: auto;
+}
+
+#addressInfo {
+	width: 800px;
+	position: relative;
+	margin: auto;
+	background-color: rebeccapurple;
+	opacity: 0.7;
+}
+
+#canvas {
+	background-color: rebeccapurple;
+	position: fixed;
+	z-index: 0;
+	-webkit-filter: blur(3px);
+	-moz-filter: blur(3px);
+	-o-filter: blur(3px);
+	-ms-filter: blur(3px);
+	filter: blur(3px);
+	max-width: 100%;
+	max-height: 100%;
+	top: 0;
+}
+
+#log {
+	color: orange;
+	font-family: 'Consolas';
+}
+
+#history_status {
+	opacity: 0.5;
+	font-family: 'Consolas';
+	font-height: 10px;
+	position: relative;
+	width: 40%;
+	margin: auto;
+}
+
+#accept, #exit {
+	width: 30%;
+	position: relative;
+	display: inline-block;
+	font-family: 'Consolas';
+	font-weight: bold;
+	color: black;
+	margin: 20px;
+}
+
+#cookie_warning {
+	position: fixed;
+	width: 100%;
+	height: 100px;
+	background-color: lightgreen; 
+	bottom: 0;
+	padding: 20px;
+	z-index: 1;
+	display: none;
+}
+
+#downloading_log {
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100%;
+	width: 300px;
+	padding: 2%;
+	background-color: rgb(0, 132, 172);
+	opacity: 0.8;
+}
+
+#user_info {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 300px;
+	padding: 2%;
+	background-color: rgb(77, 50, 121);
+	opacity: 0.8;
+}
+
+.heading {
+	font-weight: bold;
+	font-family: 'Bungee';
+	width: 200px;
+	margin: auto;
+}
+
+.file {
+	position: relative;
+	display: block;
+	width: 90%;
+	height: 30px;
+	margin-left: 20px;
+	cursor: pointer;
+}
+
+.file_icon {
+	position: relative;
+	float: left;
+	width: 20px;
+	height: 20px;
+	margin-right: 5px;
+}
+
+.file_icon img {
+	max-width: 100%;
+	max-height: 100%;
+}

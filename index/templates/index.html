@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div id="addressInfo">
+    Device:
+    <select id="remote">
+        <option value="">Select device</option>
+        <option value="127.0.0.1">default</option>
+        {% for dev in devices %}
+            <option value="{{ dev.address }}">{{ dev.description }}</option>
+        {% endfor %}
+    </select>
+    <button id="connect">Connect</button>
+    <span id="log">Not connected</span>
+    <button id="transfer_files" disabled="true">Transfer files</button>
+    <button id="broadcast">Request broadcast</button>
+    <button id="location" disabled="true">Show on map</button>
+</div>
+<br>
+<div id="user_info">
+    <div class="heading">{{ user_login }}</div><br/>
+    <div>
+        <ul id="user_opts">
+            <li>Add device</li>
+            <li><a href="/index/logout">Log out<a></li>
+        </ul>
+    </div>
+</div>/
+<div id="mainBox">
+</div>
+<div id="broadcast_window">
+    <img src="icons/tv_test.png">
+</div>
+<div id="downloading_log">
+    <div class="heading">CALL HISTORY</div><br/>
+</div>
+
+{% endblock %}

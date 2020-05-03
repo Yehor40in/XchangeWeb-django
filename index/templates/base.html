@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>XCHANGE</title>
+	<link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<header>
+		<h1>control panel</h1>
+		<br>
+	</header>
+	<br>
+	<br>
+	<br>
+
+	{% block content %}
+	{% endblock %}
+
+	<br/>
+	<br/>
+	<footer>
+			<div>Icons made by <a href="https://www.flaticon.com/authors/dimitry-miroliubov" target="_blank" title="Dimitry Miroliubov">Dimitry Miroliubov</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon" target="_blank">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0"target="_blank">CC 3.0 BY</a>
+			</div>
+			<p id="copy">Copyright &copy; 2019 | Yehor Sorokin</p>
+		</footer>
+		<script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+		<script async defer
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwPn9aupBkTm2Q6l6XgU8zFzo5oVSdNvc&callback=initMap">
+		</script>
+	</body>
+</html>

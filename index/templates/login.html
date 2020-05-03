@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome | XCHANGE</title>
+	<link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+	<div id="login_box">
+        <div id="login_opts">
+            <div id="lopt_first">Log in</div>
+            <div id="lopt_second">Sign up</div>
+        </div>
+
+		<form id="login_form" action="{% url 'index:login' %}" method="POST">
+            {% if login_errors %}
+                {% for error in login_errors %}
+                    <p style='color:red'>{{ error }}</p><br/>
+                {% endfor %}
+            {% endif %}
+
+            {% csrf_token %}
+            {% for field in login_form %}
+                <br/>
+                {{ field.errors }}
+                {{ field.label_tag }} {{ field }}
+            {% endfor %}
+            <br/>
+            <button type="submit"><b>Log in</b></button>
+        </form>
+		<form id="reg_form" action="{% url 'index:signup' %}" method="POST">
+            {% if signup_errors %}
+                {% for error in signup_errors %}
+                    <p style='color:red'>{{ error }}</p><br/>
+                {% endfor %}
+            {% endif %}
+
+            {% csrf_token %}
+            {% for field in reg_form %}
+                <br/>
+                {{ field.errors }}
+                {{ field.label_tag }} {{ field }}
+            {% endfor %}
+            <br/>
+            <button type="submit"><b>Create account</b></button>
+        </form>
+	</div>
+	<br>
+	<br>
+	<footer>
+		<div>Icons made by <a href="https://www.flaticon.com/authors/dimitry-miroliubov" target="_blank" title="Dimitry Miroliubov">Dimitry Miroliubov</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon" target="_blank">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0"target="_blank">CC 3.0 BY</a>
+		</div>
+		<p id="copy">Copyright &copy; 2019 | Yehor Sorokin</p>
+	</footer>
+	<script type="text/javascript" src="{% static 'js/animation.js' %}"></script>
+</body>
+</html>
