@@ -101,12 +101,7 @@ window.onload = () => {
 
                 if (package['command']['name'] == "record_video_response")
                 {
-                    let blob = new Blob([new Uint8Array(package['command_parameters']['base64_string_video'].atob())]);
-                    let reader = new FileReader();
-                    reader.onload = (event) => {
-                        broadcast_win.firstElementChild.src = reader.result;
-                    }
-                    reader.readAsDataURL(blob);
+                    broadcast_win.firstElementChild.src = "data:image/jpeg;charset=utf-8;base64," + package['command_parameters']['base64_string_video'];
 
                     ws.send(JSON.stringify({
                         "command": {
