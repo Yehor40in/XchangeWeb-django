@@ -277,6 +277,7 @@ a {
 	padding: 2%;
 	background-color: rgb(0, 132, 172);
 	opacity: 0.8;
+	overflow: scroll;
 }
 
 #user_info {
